@@ -21,7 +21,7 @@ const Home = () => {
                 console.log("Api response :", response);
             };
 
-            fetchMovies();
+            // fetchMovies();
         }
     }, []);
 
