@@ -16,7 +16,7 @@ function App() {
                         <Route index element={<Home />} />
 
                         <Route path="movie" element={<MovieLayout />}>
-                            <Route path=":imdbId" element={<MovieDetail />} />
+                            <Route path=":imdbID" element={<MovieDetail />} />
                         </Route>
 
                         <Route path="*" element={<PageNotFound />} />
