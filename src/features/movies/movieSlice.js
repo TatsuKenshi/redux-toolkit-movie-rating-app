@@ -58,9 +58,8 @@ const movieSlice = createSlice({
     initialState,
     // reducers/actions object
     reducers: {
-        addMovies: (state, { payload }) => {
-            // immer takes care of state immutability
-            state.movies = payload;
+        removeSelectMovieOrShow: (state) => {
+            state.selectMovieOrShow = {};
         },
     },
     // extra reducers handle work outside the component
@@ -89,7 +88,7 @@ const movieSlice = createSlice({
     },
 });
 
-export const { addMovies } = movieSlice.actions;
+export const { removeSelectMovieOrShow } = movieSlice.actions;
 
 // funcs to get all the movies and shows in the state
 export const getAllMovies = (state) => state.movies.movies;
