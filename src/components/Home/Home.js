@@ -17,11 +17,15 @@ const Home = () => {
     // dispatch
     const dispatch = useDispatch();
 
+    // default search term
+    const movieText = "Harry";
+    const showText = "Friends";
+
     useEffect(() => {
         if (fetchRef.current) {
             fetchRef.current = false;
-            dispatch(fetchAsyncMovies());
-            dispatch(fetchAsyncShows());
+            dispatch(fetchAsyncMovies(movieText));
+            dispatch(fetchAsyncShows(showText));
         }
     }, [dispatch]);
 
